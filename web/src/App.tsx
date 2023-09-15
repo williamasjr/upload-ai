@@ -4,9 +4,10 @@ import { Separator } from './components/ui/separator';
 import { Textarea } from "./components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./components/ui/select";
 import { Slider } from "./components/ui/slider";
-import { VideoInputForm } from "./components/ui/video-input-form";
+import { VideoInputForm } from "./components/video-input-form";
+import { PromptSelect } from "./components/prompt-select";
 
-export function App() {
+export function App() {  
   return (
     <div className="min-h-screen flex flex-col">
       <div className="px-6 py-3 flex  items-center justify-between border-b">
@@ -55,15 +56,7 @@ export function App() {
 
          <div className="space-y-2">
             <label>Prompt</label>
-            <Select>
-              <SelectTrigger>
-                <SelectValue placeholder="Selecione um prompt..." />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="title">Título do Youtube</SelectItem>
-                <SelectItem value="description">Descrição do Youtube</SelectItem>
-              </SelectContent>
-            </Select>
+            <PromptSelect />
           </div>
 
           <div className="space-y-2">
